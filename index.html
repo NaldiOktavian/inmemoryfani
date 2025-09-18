@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Countdown Hukuman 90 Hari — Fanny</title>
+  <link rel="preload" href="assets/fani-1.jpg" as="image">
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="Countdown hukuman 90 hari untuk Fanny dengan galeri foto dan musik kenangan.">
+</head>
+<body>
+  <div class="card" role="region" aria-label="Countdown hukuman 90 hari">
+    <header>
+      <div class="logo">90D</div>
+      <div>
+        <h1>Countdown Hukuman 90 Hari — <span id="namaTarget">Fanny</span></h1>
+        <p class="lead">Hitung mundur dimulai otomatis dari <strong>hari ini</strong> (lokal Asia/Jakarta). Ada galeri foto & musik untuk mengenang jasa Fani.</p>
+      </div>
+    </header>
+
+    <!-- GALERI FOTO -->
+    <section class="gallery" aria-label="Galeri kenangan Fani">
+      <div class="frame" id="frame">
+        <!-- gambar dimasukkan via JS -->
+        <div class="badge">• Kenangan Fani</div>
+        <div class="nav" aria-hidden="false">
+          <button id="prev" title="Sebelumnya" aria-label="Sebelumnya">‹</button>
+          <button id="next" title="Berikutnya" aria-label="Berikutnya">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown" aria-live="polite">
+      <div class="blk"><div class="num" id="d">--</div><div class="lbl">Hari</div></div>
+      <div class="blk"><div class="num" id="h">--</div><div class="lbl">Jam</div></div>
+      <div class="blk"><div class="num" id="m">--</div><div class="lbl">Menit</div></div>
+      <div class="blk"><div class="num" id="s">--</div><div class="lbl">Detik</div></div>
+    </section>
+
+    <!-- PEMUTAR MUSIK -->
+    <section class="player" aria-label="Pemutar lagu kenangan">
+      <button id="play" class="playbtn" title="Putar/Jeda" aria-label="Putar atau Jeda">▶</button>
+      <div class="title">
+        <div><strong id="songTitle">—</strong></div>
+        <div class="muted">Klik “Putar” untuk mulai (autoplay suara biasanya diblokir browser).</div>
+      </div>
+      <div class="bar" aria-hidden="true"><span id="prog"></span></div>
+      <button id="mute" class="btn" aria-label="Bisukan atau nyalakan suara">Mute</button>
+      <button id="restart" class="btn" aria-label="Ulangi lagu">Ulangi</button>
+    </section>
+
+    <!-- META -->
+    <div class="meta">
+      <span class="pill">Status: <strong id="status">Berjalan</strong></span>
+      <span class="pill">Mulai: <span id="startAt">—</span></span>
+      <span class="pill">Berakhir: <span id="endAt">—</span></span>
+      <button id="copyEnd" class="btn">Salin tanggal akhir</button>
+      <button id="reset" class="btn primary">Reset 90 Hari dari Sekarang</button>
+    </div>
+  </div>
+
+  <audio id="audio" preload="auto" loop></audio>
+  <script src="js/app.js"></script>
+</body>
+</html>
